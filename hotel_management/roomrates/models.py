@@ -17,9 +17,12 @@ class OverriddenRoomRate(models.Model):
         return f"{self.room_rate.room_name} - {self.stay_date}"
 
 class Discount(models.Model):
+    FIXED = 'fixed'
+    PERCENTAGE = 'percentage'
+
     DISCOUNT_TYPE_CHOICES = [
-        ('fixed', 'Fixed'),
-        ('percentage', 'Percentage'),
+        (FIXED, 'Fixed'),
+        (PERCENTAGE, 'Percentage'),
     ]
 
     discount_id = models.IntegerField(primary_key=True)

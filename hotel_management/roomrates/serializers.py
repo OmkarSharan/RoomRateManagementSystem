@@ -4,7 +4,7 @@ from roomrates.models import RoomRate, OverriddenRoomRate, Discount, DiscountRoo
 class RoomRateSerializer(serializers.ModelSerializer):
     class Meta:
         model = RoomRate
-        fields =  fields = ('room_id', 'room_name', 'default_rate')
+        fields =  '__all__'
 
 class OverriddenRoomRateSerializer(serializers.ModelSerializer):
     class Meta:
